@@ -1,0 +1,12 @@
+name: 'akcja Docker DM'
+description: 'Przykład akcji Docker DM'
+inputs:
+  - name: 'parametr1'
+    description: 'Pierwszy parametr wejściowy'
+    required: true
+    default: 'wartość domyślna'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.parametr1 }}
