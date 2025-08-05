@@ -1,2 +1,2 @@
 # DockerActionRecipe-DM
-DockerActionRicipe-DM
+DockerActionRecipe-DM
