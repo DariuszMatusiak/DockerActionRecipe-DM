@@ -20,4 +20,4 @@ jobs:
         - name: Run a action.yaml script
           uses: ./
           with:
-              parametr1: "@DM"     
+              parametr1: "DM"     
