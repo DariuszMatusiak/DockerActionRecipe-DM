@@ -17,7 +17,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - uses: actions/checkout@v4.1.1
-        - name: Run a action-dm.yaml script
+        - name: Run a action.yaml script
           uses: ./
           with:
               parametr1: "@DM"     
