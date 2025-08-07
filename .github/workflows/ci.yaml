@@ -18,6 +18,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - uses: actions/checkout@v4.1.1
         - name: Run a action.yaml script
+          id: my-action
           uses: ./
-          #with:
-              #parametr1: "DM"     
+          with:
+              parametr1: "DM"     
+        
+        - name: Output the answer
+          run: echo "The answer is ${{ steps.my-action.outputs.answer1 }}"
+        
+        - name: test the container
+          if: ${{ steps.my-action.outputs.answer != 42 }}
+          run: |
+            echo "::error file=entrypoint.sh, line=4, title=Error in container:: the answer was not expected"
+            exit 1
+
+
+          
